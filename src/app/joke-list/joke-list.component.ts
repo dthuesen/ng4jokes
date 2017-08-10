@@ -10,19 +10,26 @@ import { JokeFormComponent } from '../joke-form/joke-form.component'
 })
 export class JokeListComponent {
 
-  jokes: Joke[];
+  jokes: Joke[] = [];
 
-  constructor() {
-    this.jokes = [
-      new Joke('What did the cheese say when it looked in the mirror?', 'Hello-me (Halloumi)'),
-      new Joke('What kind of cheese do you use to disguise a small horse?', 'Mask-a-pony (Mascarpone)'),
-      // tslint:disable-next-line:quotemark
-      new Joke('A kid thew a lump of cheddar at me', "I thought 'That's not very mature'"),
-    ]
+  // constructor() {
+  //   this.jokes = [
+  //     new Joke('What did the cheese say when it looked in the mirror?', 'Hello-me (Halloumi)'),
+  //     new Joke('What kind of cheese do you use to disguise a small horse?', 'Mask-a-pony (Mascarpone)'),
+  //     // tslint:disable-next-line:quotemark
+  //     new Joke('A kid thew a lump of cheddar at me', "I thought 'That's not very mature'"),
+  //   ]
+  // }
+
+  // addJoke(joke) {
+  //   this.jokes.unshift(joke);
+  // }
+  addJoke() {
+    this.jokes.unshift(new Joke('What did the cheese say when it looked in the mirror?', 'Hello-me (Halloumi)'));
   }
 
-  addJoke(joke) {
-    this.jokes.unshift(joke);
+  deleteJoke(joke) {
+    this.jokes = [];
   }
 
 }
