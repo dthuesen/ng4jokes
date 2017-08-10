@@ -1,10 +1,17 @@
 <div class="card mb-3">
   <div class="card-block">
-    <h4 class="card-title">{{data.setup}}</h4>
+    <h4 class="card-title">{{data.setup}}
+      <!-- Content Projection in here, but only selecting the css class name selector .setup of the content
+           it can also be selected by the html tag or id selector -->
+      <ng-content select=".setup"></ng-content>  
+    </h4>
     <div class="row">
       <div class="col">
         <p class="card-text"
-          [hidden]="data.hide">{{data.punchline}}</p>
+          [hidden]="data.hide">
+          <!-- Content Projection in here, but only selecting the css class name selector .punchline of the content -->
+          <ng-content select=".punchline"></ng-content>  
+        </p>
       </div>
     </div>
     <div class="row">
