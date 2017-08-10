@@ -31,15 +31,15 @@ export class JokeComponent implements OnChanges,
   @Input('joke') data: Joke;
 
   constructor() {
-    console.log(`new - data is ${this.data}`);
+    console.log(`new - data is ${JSON.stringify(this.data)}`);
   }
 
   ngOnChanges() {
-    console.log(`ngOnChanges - data is ${this.data}`);
+    console.log(`ngOnChanges - data is ${JSON.stringify(this.data)}`);
   }
 
   ngOnInit() {
-    console.log(`ngOnInit - data is ${this.data}`);
+    console.log(`ngOnInit - data is ${JSON.stringify(this.data)}`);
   }
 
   ngDoCheck() {
