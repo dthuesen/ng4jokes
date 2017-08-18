@@ -1,5 +1,12 @@
-<!--The whole content below can be removed with the new code.-->
+
 <div class="container">
-  <app-joke-list></app-joke-list>
+  <app-joke-list>
+    <!-- This is the view which will be projected -->
+    <!-- [joke] is an input property of JokeComponent and will be ... -->
+    <app-joke [joke]="jokeProp">  <!-- ...filled with the property 'jokeProp' from the app component-->
+      <span class="setup">{{ jokeProp.setup }}?</span>
+      <h1 class="punchline">{{ jokeProp.punchline }}</h1>
+    </app-joke>
+  </app-joke-list>
 </div>
 

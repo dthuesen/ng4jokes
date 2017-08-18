@@ -14,10 +14,16 @@
       </div>
   </div>
 
+  <!-- Part of the JokeListComponent -->
+  <h4>View Jokes</h4>
   <app-joke *ngFor="let j of jokes" [joke]="j">
     <span class="setup">{{j.setup}}?</span>                         <!-- Preparing the content for Content Projection -->
     <h2 class="punchline">{{j.punchline}}</h2>                      <!-- Preparing the content for Content Projection -->
   </app-joke>
+
+  <!-- Projected content of the AppComponent -->
+  <h4>Content Jokes</h4>
+  <ng-content></ng-content>
 
   
 
